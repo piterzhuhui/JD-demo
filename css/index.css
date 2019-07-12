@@ -1,0 +1,283 @@
+img{
+    /* 解决图片底侧有空白缝隙的问题 */
+    vertical-align: top;
+}
+
+/* ************grid-col1 start************ */
+/* 中间分类模块 */
+.grid{
+    height: 480px;
+}
+.grid-col1{
+    width: 190px;
+    height: 100%;
+    background-color:#6e6568;
+    color: #fff;
+    /* 不是给字的，是给 / 的 */
+    font-size: 14px;
+    position: relative;
+}
+.ad{
+    width: 250px;
+    height: 480px;
+    position: absolute;
+    top: 0;
+    left: -250px;
+}
+.ad-r{
+    position: absolute;
+    top: 0;
+    left: 250px;
+    z-index: 999;
+    width: 0;
+    height: 480px;
+    background: url(../images/ad-r.jpg) no-repeat;
+    /* 这个图片做动画，所以给他添加过渡 */
+    transition: all 0.5s;
+}
+/* 鼠标经过广告这个大盒子的时候，里面这个叫 ad-r 图的宽度由0变为990px */
+.ad:hover .ad-r{
+    width: 990px;
+}
+.grid-col1 a{
+    color: #fff;
+    /* 给字的 */
+    font-size: 14px;
+    margin: 0 3px;
+}
+.grid-col1 a:hover{
+    color:#f10215;
+}
+.grid-col1 ul{
+    padding: 10px 0; 
+}
+.grid-col1 ul li{
+    padding-left: 12px;
+    height: 29px;
+    line-height: 26px;
+}
+.grid-col1 ul li:hover{
+    background-color: #9c9698;
+}
+/* ************grid-col1  end************ */
+
+/* ************grid-col2  start************ */
+.grid-col2{
+    width: 790px;
+    height: 100%;
+    margin-left: 10px;
+}
+/* banner部分 */
+.grid-col2-b div{
+    float: left;
+    margin-top: 10px;
+}
+.grid-col2-b div:last-child{
+    float: right;
+    margin-top: 10px;
+}
+/* 箭头部分 */
+.grid-col2-t{
+    position: relative;
+}
+.arrow-l,
+.arrow-r{
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    background-color:rgba(0, 0, 0, 0.3);
+    /* 下面这两句话加起来让它垂直居中 */
+    top: 50%;
+    transform: translateY(-50%);
+    /* 上面这两句话加起来让它垂直居中 */
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.3);
+    font-family: arial;
+    font-weight: normal;
+}
+.arrow-r {
+    right: 0;
+}
+.circle{
+    width: 165px;
+    height: 20px;
+    background: rgba(255, 255, 255, .3);
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding-left: 10px;
+}
+.circle li{
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    float: left;
+    margin: 4px;
+    /* 鼠标经过li 的时候变成小手 */
+    cursor: pointer;
+}
+.circle .current{
+    background-color: #f10215;
+}
+/* ************grid-col2  end************ */
+
+/* ************grid-col3  start************ */
+.grid-col3{
+    width: 190px;
+    height: 100%;
+}
+
+/* 右边模块 */
+.login{
+    height: 85px;
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+}
+.login-t{
+    width: 95px;
+    height: 60px;
+    line-height: 20px;
+    font-size: 12px;
+    /* 强制一行内显示 */
+    white-space: nowrap;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* 超出部分显示省略号 */
+    text-overflow: ellipsis;
+    color: #666;
+    /* 这里给padding，把文字挤过来 */
+    padding-left: 60px;
+    
+    position: relative;
+}
+.login-t a{
+    color: #666;
+}
+.login-t a:hover{
+    color: #f10215;
+}
+.login-b a{
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    border: 2px solid #f10215;
+    line-height: 20px;
+    margin-right: 3px;
+    text-align: center;
+    color: #f10215;
+}
+.login-b a:hover{
+    background-color: #f10215;
+    color: #fff;
+}
+.user-info{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../images/sprite_userinfo@1x.png) no-repeat -70px 0; 
+}
+.user-info img{
+    width: 40px;
+    border-radius: 50%;
+    margin: 5px;
+}
+.news{
+    height: 155px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    padding: 7px 13px 0;
+    /* 加了padding之后宽高会有变化，有两种方式可以解决，
+    第一种是把宽高减去增加的padding值 
+    第二种是增加一句话：box-sizing: border-box;*/
+    box-sizing: border-box;
+}
+.news-t{
+    height: 19px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.news-t a{
+    float: left;
+    height: 17px;
+    line-height: 17px;
+}
+.cuxiao{
+    width: 38px;
+    border-right: 1px solid #ccc;
+}
+.gongao{
+    margin-left: 15px;
+}
+.more{
+    float: right!important;
+}
+.news-t div{
+    height: 2px;
+    width: 28px;
+    background-color: #f10215;
+    position: absolute;
+    left: -1px;
+    bottom: -1px;
+}
+.news-b{
+    padding-top: 15px;
+}
+.news-b ul li{
+    height: 23px;
+    line-height: 23px;
+}
+.expand{
+    height: 208px;
+    /* expand这个宽度继承了父亲190 宽度 */
+    overflow: hidden;
+}
+.expand ul{
+    /* 父亲是190  但是里面的li 宽度超过了4个li  此时让ul 宽度变大 */
+    width: 195px;
+}
+.expand li{
+    width: 47px;
+    height: 69px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    float: left;
+}
+.expand  li a {
+	display: block;
+	padding-top: 15px;
+	text-align: center;
+}
+.expand li i{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    background: url(../images/sprite_fs@1x.png) no-repeat;
+    width: 18px;
+	height: 23px;
+	background-position: -5px -88px;
+}
+.expand  li:first-child i {
+	width: 18px;
+	height: 23px;
+	background-position: -5px -88px;
+}
+/* ************grid-col3  end************ */
+
+
+
+.nav{
+    width: 100px;
+    height: 100px;
+    background-color: #ff1100;
+    display: none;
+    position: absolute;
+    top: 200px;
+
+}
